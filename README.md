@@ -43,30 +43,29 @@ Repeat this step for all csv files
 ### Data Exploration
 Explore a few key tables
 
-## Take a look at the daily_activity data.
+### Take a look at the daily_activity data.
 ```head(daily_activity)```
 
-## Identify all the columns in the daily_activity data.
+### Identify all the columns in the daily_activity data.
 ```colnames(daily_activity)```
 
 
-## Take a look at the sleep_day data.
+### Take a look at the sleep_day data.
 ```head(sleep_day)```
 
-# Identify all the columns in the daily_activity data.
+### Identify all the columns in the daily_activity data.
 ```colnames(sleep_day)```
 
 ## Data Summary Statistics
 
-## How many unique participants are there in each dataframe? 
-## It looks like there may be more participants in the daily activity 
-## dataset than the sleep dataset.
+1.  How many unique participants are there in each dataframe? 
+It looks like there may be more participants in the daily activity dataset than the sleep dataset.
 
 ```n_distinct(daily_activity$Id)
 n_distinct(sleep_day$Id)```
 
 
-**# How many observations are there in each dataframe?**
+2. How many observations are there in each dataframe?
 
 ```nrow(daily_activity)
 nrow(sleep_day)```
@@ -74,7 +73,7 @@ nrow(sleep_day)```
 
 # What are some quick summary statistics we'd want to know about each data frame?
   
-**# For the daily activity dataframe:**
+# For the daily activity dataframe:
 ```daily_activity %>%  
   select(TotalSteps,
          TotalDistance,
@@ -82,7 +81,7 @@ nrow(sleep_day)```
   summary()```
 
 
-**# For the sleep dataframe:**
+# For the sleep dataframe:
 
 ```sleep_day %>%  
   select(TotalSleepRecords,
