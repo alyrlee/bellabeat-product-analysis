@@ -175,26 +175,12 @@ ggplot(data=dailyActivity_merged, aes(x=TotalSteps, y=SedentaryMinutes)) +
 ![image](https://github.com/user-attachments/assets/66c30c8e-cad8-4a63-aa66-ce3c2ea23382)
 
 
-
 ### Take a look at how many participants are in this data set.
 ```r
 n_distinct(combined_data$Id)
 ```
 
-
 ## Process
-BigQuery is used to upload the dataset, format, clean, and prepare data to be loaded into R.
-Data is imported into R, cleaned, transformed, and summary statistics. 
+R Studio is used to upload the dataset, format, clean, and prepare data to be loaded into Tableau
 
-```
-
-```
-
-### Combining the Data
-Data is combined and loaded into R for visualization
-### Data Exploration
-
-
-### Data Cleaning
-
-## Analyze and Share 
+### R Visualization in Tableau 
