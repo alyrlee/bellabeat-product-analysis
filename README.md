@@ -24,12 +24,14 @@ analyze smart device usage data in order to gain insight into how consumers use 
 Remember to upload your CSV files to your project from the relevant data source:
 https://www.kaggle.com/arashnic/fitbit
 
-```daily_activity <- read.csv("dailyActivity_merged.csv")```
+``` r
+daily_activity <- read.csv("dailyActivity_merged.csv")
+```
 
 Repeat this step for all csv files
 
 2. Load and install common packages and libraries 
-   ```
+   ```r
    #set working directory
    #setwd("~/Fitbit Case Study")
    #install.packages('tidyverse')
@@ -44,77 +46,118 @@ Repeat this step for all csv files
 Explore a few key tables
 
  Take a look at the daily_activity data.
-```head(daily_activity)```
+```r
+head(daily_activity)
+```
 
 Identify all the columns in the daily_activity data.
-```colnames(daily_activity)```
+```r
+colnames(daily_activity)
+```
 
 
 Take a look at the sleep_day data.
-```head(sleep_day)```
+```r
+head(sleep_day)
+```
 
 Identify all the columns in the daily_activity data.
-```colnames(sleep_day)```
+```r
+colnames(sleep_day)
+```
 
 ## Data Summary Statistics
 
 1.  How many unique participants are there in each dataframe? 
 It looks like there may be more participants in the daily activity dataset than the sleep dataset.
 
-```n_distinct(daily_activity$Id)
-n_distinct(sleep_day$Id)```
+```r
+n_distinct(daily_activity$Id)
+n_distinct(sleep_day$Id)
+```
 
 2. How many observations are there in each dataframe?
 
-```nrow(daily_activity)
-nrow(sleep_day)```
+```r
+nrow(daily_activity)
+nrow(sleep_day)
+```
 
-# What are some quick summary statistics we'd want to know about each data frame?
+## What are some quick summary statistics we'd want to know about each data frame?
   
 # For the daily activity dataframe:
-```daily_activity %>%  
+```r
+daily_activity %>%  
   select(TotalSteps,
          TotalDistance,
          SedentaryMinutes) %>%
-  summary()```
-![Screenshot 2024-07-30 at 11 41 26 AM](https://github.com/user-attachments/assets/17eb638b-965a-43d1-bb6f-7d24b8c7f604)
-![File](../Data Analytics/bellabeat-product-analysis/results/dataframe_daily_activities.png)
+  summary()
+```
+
+```r
+## Id ActivityDate TotalSteps TotalDistance TrackerDistance
+## 1 1503960366 4/12/2016         13162          8.5             8.5 
+## 2 1503960366 4/13/2016         10735          6.97            6.97
+## 3 1503960366 4/14/2016         10460          6.74            6.74
+## 4 1503960366 4/15/2016          9762          6.28            6.28
+## 5 1503960366 4/16/2016         12669          8.16            8.16
+## 6 1503960366 4/17/2016          9705          6.48            6.48
+```
 
 
-# For the sleep dataframe:
+### For the sleep dataframe:
 
-```sleep_day %>%  
+```r
+sleep_day %>%  
   select(TotalSleepRecords,
          TotalMinutesAsleep,
          TotalTimeInBed) %>%
-  summary()```
-![Screenshot 2024-07-30 at 11 43 50 AM](https://github.com/user-attachments/assets/819d3829-aa44-45d0-b588-6de5626c4ce6)
+  summary()
+```
+```r
+
+```
 
 
-# What does this tell us about how this sample of people's activities? 
+What does this tell us about how this sample of people's activities? 
+
 ### Data Plots
-# What's the relationship between steps taken in a day and sedentary minutes? 
-# How could this help inform the customer segments that we can market to? 
-# E.g. position this more as a way to get started in walking more? 
-# Or to measure steps that you're already taking?
 
-```ggplot(data=daily_activity, aes(x=TotalSteps, y=SedentaryMinutes)) + geom_point()```
-[Relationship between minutes and time in bed.pdf](https://github.com/user-attachments/files/16431068/Relationship.between.minutes.and.time.in.bed.pdf)
+What's the relationship between steps taken in a day and sedentary minutes? 
+How could this help inform the customer segments that we can market to? 
+E.g. position this more as a way to get started in walking more? 
+Or to measure steps that you're already taking?
 
-# What's the relationship between minutes asleep and time in bed? 
-# You might expect it to be almost completely linear - are there any unexpected trends?
+```r
+ggplot(data=daily_activity, aes(x=TotalSteps, y=SedentaryMinutes)) + geom_point()
+```
+
+```r
+
+```
+
+What's the relationship between minutes asleep and time in bed? 
+You might expect it to be almost completely linear - are there any unexpected trends?
   
-```ggplot(data=sleep_day, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) + geom_point()```
+```r
+ggplot(data=sleep_day, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) + geom_point()
+```
 
-[Relationship between steps taken in a day and sedentary minutes.pdf](https://github.com/user-attachments/files/16431069/Relationship.between.steps.taken.in.a.day.and.sedentary.minutes.pdf)
+```r
 
-# What could these trends tell you about how to help market this product? Or areas where you might want to explore further?
+```
+
+What could these trends tell you about how to help market this product? Or areas where you might want to explore further?
 
 ### Summary statistics and merged data:
-```combined_data <- merge(sleep_day, daily_activity, by="Id")```
+```r
+combined_data <- merge(sleep_day, daily_activity, by="Id")
+```
 
-# Take a look at how many participants are in this data set.
-```n_distinct(combined_data$Id)```
+### Take a look at how many participants are in this data set.
+```r
+n_distinct(combined_data$Id)
+```
 
 
 ## Process
