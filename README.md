@@ -157,10 +157,24 @@ What could these trends tell you about how to help market this product? Or areas
 combined_data <- merge(sleep_day, daily_activity, by="Id")
 ```
 
+Relationship between minutes and time in bed
+![image](https://github.com/user-attachments/assets/3374a823-0270-4301-9617-df792a5e05d6)
 
-![Relationship between minutes and time in bed.pdf](https://github.com/user-attachments/files/16431819/Relationship.between.minutes.and.time.in.bed.pdf)
 
-![Relationship between steps taken in a day and sedentary minutes.pdf](https://github.com/user-attachments/files/16431837/Relationship.between.steps.taken.in.a.day.and.sedentary.minutes.pdf)
+Relationship between steps taken in a day and sedentary minutes
+![image](https://github.com/user-attachments/assets/30a3a540-d0e5-4601-860f-a906f62c869e)
+
+```r
+ggplot(data=dailyActivity_merged, aes(x=TotalSteps, y=SedentaryMinutes)) + 
+  geom_point() + 
+  geom_smooth() + 
+  labs(title="Total Steps vs. Sedentary Minutes",
+       x = "Steps", y = "Minutes")
+```
+
+![image](https://github.com/user-attachments/assets/66c30c8e-cad8-4a63-aa66-ce3c2ea23382)
+
+
 
 ### Take a look at how many participants are in this data set.
 ```r
