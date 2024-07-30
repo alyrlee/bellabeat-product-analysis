@@ -157,6 +157,11 @@ What could these trends tell you about how to help market this product? Or areas
 combined_data <- merge(sleep_day, daily_activity, by="Id")
 ```
 
+
+![Relationship between minutes and time in bed.pdf](https://github.com/user-attachments/files/16431819/Relationship.between.minutes.and.time.in.bed.pdf)
+
+![Relationship between steps taken in a day and sedentary minutes.pdf](https://github.com/user-attachments/files/16431837/Relationship.between.steps.taken.in.a.day.and.sedentary.minutes.pdf)
+
 ### Take a look at how many participants are in this data set.
 ```r
 n_distinct(combined_data$Id)
@@ -175,9 +180,6 @@ Data is imported into R, cleaned, transformed, and summary statistics.
 Data is combined and loaded into R for visualization
 ### Data Exploration
 
-![Relationship between minutes and time in bed.pdf](https://github.com/user-attachments/files/16431819/Relationship.between.minutes.and.time.in.bed.pdf)
-
-![Relationship between steps taken in a day and sedentary minutes.pdf](https://github.com/user-attachments/files/16431837/Relationship.between.steps.taken.in.a.day.and.sedentary.minutes.pdf)
 
 ### Data Cleaning
 
