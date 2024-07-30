@@ -43,17 +43,17 @@ Repeat this step for all csv files
 ### Data Exploration
 Explore a few key tables
 
-### Take a look at the daily_activity data.
+ Take a look at the daily_activity data.
 ```head(daily_activity)```
 
-### Identify all the columns in the daily_activity data.
+Identify all the columns in the daily_activity data.
 ```colnames(daily_activity)```
 
 
-### Take a look at the sleep_day data.
+Take a look at the sleep_day data.
 ```head(sleep_day)```
 
-### Identify all the columns in the daily_activity data.
+Identify all the columns in the daily_activity data.
 ```colnames(sleep_day)```
 
 ## Data Summary Statistics
