@@ -55,7 +55,6 @@ Identify all the columns in the daily_activity data.
 colnames(daily_activity)
 ```
 
-
 Take a look at the sleep_day data.
 ```r
 head(sleep_day)
@@ -85,7 +84,7 @@ nrow(sleep_day)
 
 ## What are some quick summary statistics we'd want to know about each data frame?
   
-# For the daily activity dataframe:
+# Daily activity dataframe:
 ```r
 daily_activity %>%  
   select(TotalSteps,
@@ -105,7 +104,7 @@ daily_activity %>%
 ```
 
 
-### For the sleep dataframe:
+### Sleep dataframe:
 
 ```r
 sleep_day %>%  
@@ -115,9 +114,15 @@ sleep_day %>%
   summary()
 ```
 ```r
+ ## TotalSleepRecords TotalMinutesAsleep TotalTimeInBed 
+ ## Min.   :1.000     Min.   : 58.0      Min.   : 61.0  
+ ## 1st Qu.:1.000     1st Qu.:361.0      1st Qu.:403.0  
+ ## Median :1.000     Median :433.0      Median :463.0  
+ ## Mean   :1.119     Mean   :419.5      Mean   :458.6  
+ ## 3rd Qu.:1.000     3rd Qu.:490.0      3rd Qu.:526.0  
+ ## Max.   :3.000     Max.   :796.0      Max.   :961.0 
 
 ```
-
 
 What does this tell us about how this sample of people's activities? 
 
@@ -131,21 +136,19 @@ Or to measure steps that you're already taking?
 ```r
 ggplot(data=daily_activity, aes(x=TotalSteps, y=SedentaryMinutes)) + geom_point()
 ```
+![dataframe_daily_activities](https://github.com/user-attachments/assets/ed5ea077-21ad-4a60-8f20-e8351c72d2a0)
 
 ```r
-
 ```
-
 What's the relationship between minutes asleep and time in bed? 
 You might expect it to be almost completely linear - are there any unexpected trends?
   
 ```r
 ggplot(data=sleep_day, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) + geom_point()
 ```
+![dataframe_sleepDay](https://github.com/user-attachments/assets/851ddfe1-6b8b-4c4c-9499-c6a8d0e94fa5)
 
 ```r
-
-```
 
 What could these trends tell you about how to help market this product? Or areas where you might want to explore further?
 
@@ -171,6 +174,10 @@ Data is imported into R, cleaned, transformed, and summary statistics.
 ### Combining the Data
 Data is combined and loaded into R for visualization
 ### Data Exploration
+
+![Relationship between minutes and time in bed.pdf](https://github.com/user-attachments/files/16431819/Relationship.between.minutes.and.time.in.bed.pdf)
+
+![Relationship between steps taken in a day and sedentary minutes.pdf](https://github.com/user-attachments/files/16431837/Relationship.between.steps.taken.in.a.day.and.sedentary.minutes.pdf)
 
 ### Data Cleaning
 
