@@ -31,7 +31,7 @@ Repeat this step for all csv files
 2. Load and install common packages and libraries 
    ```
    #set working directory
-   #setwd("~/Fitbit Case Study
+   #setwd("~/Fitbit Case Study")
    #install.packages('tidyverse')
    #install.packages('skimr')
    library(tidyverse) #wrangle data
@@ -78,6 +78,7 @@ nrow(sleep_day)```
          SedentaryMinutes) %>%
   summary()```
 ![Screenshot 2024-07-30 at 11 41 26 AM](https://github.com/user-attachments/assets/17eb638b-965a-43d1-bb6f-7d24b8c7f604)
+![File](../Data Analytics/bellabeat-product-analysis/results/dataframe_daily_activities.png)
 
 
 # For the sleep dataframe:
