@@ -64,12 +64,10 @@ It looks like there may be more participants in the daily activity dataset than 
 ```n_distinct(daily_activity$Id)
 n_distinct(sleep_day$Id)```
 
-
 2. How many observations are there in each dataframe?
 
 ```nrow(daily_activity)
 nrow(sleep_day)```
-
 
 # What are some quick summary statistics we'd want to know about each data frame?
   
@@ -79,6 +77,7 @@ nrow(sleep_day)```
          TotalDistance,
          SedentaryMinutes) %>%
   summary()```
+![Screenshot 2024-07-30 at 11 41 26 AM](https://github.com/user-attachments/assets/17eb638b-965a-43d1-bb6f-7d24b8c7f604)
 
 
 # For the sleep dataframe:
@@ -88,6 +87,7 @@ nrow(sleep_day)```
          TotalMinutesAsleep,
          TotalTimeInBed) %>%
   summary()```
+![Screenshot 2024-07-30 at 11 43 50 AM](https://github.com/user-attachments/assets/819d3829-aa44-45d0-b588-6de5626c4ce6)
 
 
 # What does this tell us about how this sample of people's activities? 
@@ -98,14 +98,14 @@ nrow(sleep_day)```
 # Or to measure steps that you're already taking?
 
 ```ggplot(data=daily_activity, aes(x=TotalSteps, y=SedentaryMinutes)) + geom_point()```
-
+[Relationship between minutes and time in bed.pdf](https://github.com/user-attachments/files/16431068/Relationship.between.minutes.and.time.in.bed.pdf)
 
 # What's the relationship between minutes asleep and time in bed? 
 # You might expect it to be almost completely linear - are there any unexpected trends?
   
-
 ```ggplot(data=sleep_day, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) + geom_point()```
 
+[Relationship between steps taken in a day and sedentary minutes.pdf](https://github.com/user-attachments/files/16431069/Relationship.between.steps.taken.in.a.day.and.sedentary.minutes.pdf)
 
 # What could these trends tell you about how to help market this product? Or areas where you might want to explore further?
 
