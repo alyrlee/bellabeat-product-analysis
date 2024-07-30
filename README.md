@@ -21,10 +21,10 @@ analyze smart device usage data in order to gain insight into how consumers use 
 
 ## Data Preparation 
 1. Load CVS files
-# Remember to upload your CSV files to your project from the relevant data source:
+Remember to upload your CSV files to your project from the relevant data source:
 # https://www.kaggle.com/arashnic/fitbit
 
-daily_activity <- read.csv("dailyActivity_merged.csv")
+```daily_activity <- read.csv("dailyActivity_merged.csv")```
 
 Repeat this step for all csv files
 
