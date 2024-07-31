@@ -79,9 +79,13 @@ n_distinct(sleep$Id)
 n_distinct(weight$Id)
 ```
 33
+
 24
+
 33
+
 33
+
 8
 
 2. How many observations are there in each dataframe?
