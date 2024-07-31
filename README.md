@@ -1,6 +1,6 @@
 # Google Analytics, Capstone: How Can a Wellness Technology Company Play It Smart?
 ## Introduction
-In this case study, I will perform real-world analysis at a fictional company, Bellabeat, a high-tech manufacturer of health-focused products for women using BigQury, R, and Tableau.
+In this case study, I will perform real-world analysis at a fictional company, Bellabeat, a high-tech manufacturer of health-focused products for women using R and Tableau.
 
 ### Data Source
 [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit) (CC0: Public Domain, dataset made available through Mobius): This Kaggle data set contains personal tness trackers from thirty fittbit users.
