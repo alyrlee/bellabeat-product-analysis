@@ -145,6 +145,47 @@ daily_activity %>%
          SedentaryMinutes) %>%
   summary()
 ```
+# Percentage of Activity Types
+```r
+# Summarize the total minutes spent on different activities
+activity_summary <- dailyActivity_merged %>%
+  summarise(
+    TotalSedentaryMinutes = sum(SedentaryMinutes),
+    TotalLightlyActiveMinutes = sum(LightlyActiveMinutes),
+    TotalFairlyActiveMinutes = sum(FairlyActiveMinutes),
+    TotalVeryActiveMinutes = sum(VeryActiveMinutes)
+  )
+
+# Convert the data to long format for easier plotting
+activity_long <- activity_summary %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "ActivityType",
+    values_to = "Minutes"
+  )
+
+# Calculate the percentage of each activity type
+activity_long <- activity_long %>%
+  mutate(Percentage = Minutes / sum(Minutes) * 100)
+
+# Define high contrast colors
+high_contrast_colors <- c("#FFFF00", "#008000", "#FFA500", "#FF0000")
+
+# Create the pie chart with custom colors and percentage labels
+pie_chart <- ggplot(activity_long, aes(x = "", y = Percentage, fill = ActivityType)) +
+  geom_bar(width = 1, stat = "identity", color = "white") +
+  coord_polar("y") +
+  theme_void() +
+  scale_fill_manual(values = high_contrast_colors) +
+  geom_text(aes(label = sprintf("%.1f%%", Percentage)), 
+            position = position_stack(vjust = 0.5)) +
+  labs(title = "Percentage of Activity Types")
+
+# Display the pie chart
+print(pie_chart)
+```
+![image](https://github.com/user-attachments/assets/9a52b1bf-d71d-4df2-b948-a5bf8cb8c7b9)
+
 
 ```r
 ## Id ActivityDate TotalSteps TotalDistance TrackerDistance
