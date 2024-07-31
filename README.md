@@ -6,14 +6,14 @@ In this case study, I will perform real-world analysis at a fictional company, B
 [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit) (CC0: Public Domain, dataset made available through Mobius): This Kaggle data set contains personal fitness trackers from thirty Fitbit users.
 
 ### Scenario
-You are a junior data analyst working on the marketing analyst team at Bellabeat, a high-tech manufacturer of health-focused products for women. Bellabeat is a successful small company, but they have the potential to become a larger player in the global [smart device](https://en.wikipedia.org/wiki/Smart_device) market. Urška Sršen, co-founder and Chief Creative Officer of Bellabeat, believes that analyzing smart device fitness data could help unlock new growth opportunities for the company. You have been asked to focus on one of Bellabeat’s products and analyze smart device data to gain insight into how consumers are using their smart devices. The insights you discover will then help guide the company's marketing strategy. You will present your analysis to the Bellabeat executive team along with your high-level recommendations for Bellabeat’s marketing strategy.
+You are a junior data analyst on the marketing analyst team at Bellabeat, a high-tech manufacturer of health-focused products for women. Bellabeat is a successful small company, but they have the potential to become a larger player in the global [smart device](https://en.wikipedia.org/wiki/Smart_device) market. Urška Sršen, co-founder and Chief Creative Officer of Bellabeat, believes that analyzing smart device fitness data could help unlock new growth opportunities for the company. You have been asked to focus on one of Bellabeat’s products and analyze smart device data to gain insight into how consumers are using their smart devices. The insights you discover will then help guide the company's marketing strategy. You will present your analysis to the Bellabeat executive team and your high-level recommendations for Bellabeat’s marketing strategy.
 
 ### Background
-Urška Sršen and Sando Mur founded Bellabeat, a high-tech company that manufactures health-focused smart products. Sršen used her background as an artist to develop beautifully designed technology that informs and inspires women around the world. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women with knowledge about their own health and habits. Since it was founded in 2013, Bellabeat has grown rapidly and quickly positioned itself as a tech-driven wellness company for women.
+Urška Sršen and Sando Mur founded Bellabeat, a high-tech company that manufactures health-focused smart products. Sršen used her background as an artist to develop beautifully designed technology that informs and inspires women around the world. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women with knowledge about their health and habits. Since it was founded in 2013, Bellabeat has grown rapidly and quickly positioned itself as a tech-driven wellness company for women.
 
 ## Ask
 ## Business Task
-Analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart devices.
+Analyze smart device usage data to gain insight into how consumers use non-Bellabeat smart devices.
 
 ### Analysis Questions
 1. What are some trends in smart device usage?
@@ -21,7 +21,8 @@ Analyze smart device usage data in order to gain insight into how consumers use 
 3. How could these trends help influence Bellabeat marketing strategy?
 
 ## Data Preparation 
-1. Load CVS files
+1. Load CSV files
+   
 Remember to upload your CSV files to your project from the relevant data source:
 https://www.kaggle.com/arashnic/fitbit
 
@@ -69,7 +70,7 @@ colnames(sleep_day)
 ## Data Summary Statistics
 
 1.  How many unique participants are there in each dataframe? 
-It looks like there may be more participants in the daily activity dataset than the sleep dataset.
+It looks like there may be more participants in the daily activity dataset than in the sleep dataset.
 
 ```r
 n_distinct(daily_activity$Id)
