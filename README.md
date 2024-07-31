@@ -13,7 +13,8 @@ Urška Sršen and Sando Mur founded Bellabeat, a high-tech company that manufact
 
 ## Ask
 ## Business Task
-analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat sma devices.
+Analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat sma devices.
+
 ### Analysis Questions
 1. What are some trends in smart device usage?
 2. How could these trends apply to Bellabeat customers?
@@ -102,7 +103,6 @@ daily_activity %>%
 ## 5 1503960366 4/16/2016         12669          8.16            8.16
 ## 6 1503960366 4/17/2016          9705          6.48            6.48
 ```
-
 
 ### Sleep dataframe:
 
