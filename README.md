@@ -74,7 +74,15 @@ It looks like there may be more participants in the daily activity dataset than 
 ```r
 n_distinct(daily_activity$Id)
 n_distinct(sleep_day$Id)
+n_distinct(calries$Id)
+n_distinct(sleep$Id)
+n_distinct(weight$Id)
 ```
+33
+24
+33
+33
+8
 
 2. How many observations are there in each dataframe?
 
@@ -200,7 +208,6 @@ combined_data <- merge(sleep_day, daily_activity, by="Id")
 Relationship between minutes and time in bed
 ![image](https://github.com/user-attachments/assets/3374a823-0270-4301-9617-df792a5e05d6)
 
-
 Relationship between steps taken in a day and sedentary minutes
 ![image](https://github.com/user-attachments/assets/30a3a540-d0e5-4601-860f-a906f62c869e)
 
@@ -214,11 +221,6 @@ ggplot(data=dailyActivity_merged, aes(x=TotalSteps, y=SedentaryMinutes)) +
 
 ![image](https://github.com/user-attachments/assets/66c30c8e-cad8-4a63-aa66-ce3c2ea23382)
 
-
-### Take a look at how many participants are in this data set.
-```r
-n_distinct(combined_data$Id)
-```
 
 ## Process
 R Studio is used to upload the dataset, format, clean, and prepare data to be loaded into Tableau
