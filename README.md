@@ -272,3 +272,9 @@ ggplot(data=dailyActivity_merged, aes(x=TotalSteps, y=SedentaryMinutes)) +
 R Studio is used to upload the dataset, format, clean, and prepare data to be loaded into Tableau
 
 ### R Visualization in Tableau 
+![Screenshot 2024-07-31 at 6 19 37 PM](https://github.com/user-attachments/assets/5ffe2577-5552-4f68-9359-91d55d0ff8d1)
+
+![Screenshot 2024-07-31 at 6 27 37 PM](https://github.com/user-attachments/assets/f50e7b93-648c-4b92-bd04-69efea01c6ef)
+
+![Screenshot 2024-07-31 at 6 37 24 PM](https://github.com/user-attachments/assets/95d49d58-947c-431f-97c3-65686251e3fe)
+
