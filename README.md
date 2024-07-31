@@ -218,7 +218,7 @@ sleep_day %>%
 
 ```
 
-What does this tell us about how this sample of people's activities? 
+What does this tell us about our sample of activities? 
 
 ### Data Plots
 
