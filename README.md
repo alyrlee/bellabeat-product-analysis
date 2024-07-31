@@ -82,6 +82,46 @@ n_distinct(sleep_day$Id)
 nrow(daily_activity)
 nrow(sleep_day)
 ```
+3. Summary statistics for dailyActivity, sleepDay, hourlySteps, and weightInfo
+
+```r
+dailyActivity_merged %>% 
+  select(TotalSteps,
+         TotalDistance,
+         VeryActiveMinutes,
+         FairlyActiveMinutes,
+         LightlyActiveMinutes,
+         SedentaryMinutes,
+         Calories) %>% 
+  summary()
+```
+![Screenshot 2024-07-31 at 3 35 22 PM](https://github.com/user-attachments/assets/17a380cb-78ab-4c64-a041-53a6f2ca430d)
+
+```r
+sleepDay_merged %>% 
+  select(TotalSleepRecords,
+         TotalMinutesAsleep,
+         TotalTimeInBed) %>% 
+  summary()
+```
+![Screenshot 2024-07-31 at 3 36 11 PM](https://github.com/user-attachments/assets/cf075fcf-26e3-4370-a87e-752740ccc44e)
+
+```r
+hourlySteps_merged %>% 
+  select(ActivityHour,
+         StepTotal) %>% 
+  summary()
+```
+![Screenshot 2024-07-31 at 3 36 22 PM](https://github.com/user-attachments/assets/7424ec6a-bf44-49ba-a4c3-4e00e0f16716)
+
+```r
+weightLogInfo_merged %>% 
+  select(WeightPounds,
+         Fat,
+         BMI) %>% 
+summary()
+```
+![Screenshot 2024-07-31 at 3 36 35 PM](https://github.com/user-attachments/assets/87f6f25f-b3ef-4ef6-9d03-0a02ace429f3)
 
 ## What are some quick summary statistics we'd want to know about each data frame?
   
